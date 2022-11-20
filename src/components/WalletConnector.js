@@ -46,15 +46,6 @@ const netlist = [
     chainsymbol: 'tFIL',
     chaindecimals: 18,
   },
-  {
-    chaind: 28,
-    rpcurl: 'https://wallaby.node.glif.io/rpc/v0',
-    blockurl: 'https://blockexplorer.boba.network',
-    chainname: 'BOBA Testnet',
-    chainnetname: 'RPS',
-    chainsymbol: 'ETH',
-    chaindecimals: 18,
-  },
 ];
 
 const defaultRopstenconfig = {
