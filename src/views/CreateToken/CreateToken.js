@@ -160,8 +160,8 @@ export default function CreateTokenMain() {
     } else if (library._network.chainId === 97) {
       setCoin('BNB');
       managecontractAddr = CREATE_TOKEN_MANAGE_ADDRESS.bsc;
-    }  else if (library._network.chainId === 28) {
-      setCoin('BOBA');
+    }  else if (library._network.chainId === 31415) {
+      setCoin('FILECOIN');
       managecontractAddr = CREATE_TOKEN_MANAGE_ADDRESS.bobaTestnet;
     }
 
@@ -192,12 +192,13 @@ export default function CreateTokenMain() {
       setCoin('BNB');
       managecontractAddr = CREATE_TOKEN_MANAGE_ADDRESS.bsc;
     }
-    else if (library._network.chainId === 28) {
-      setCoin('BOBA');
+    else if (library._network.chainId === 31415) {
+      setCoin('FILECOIN');
       managecontractAddr = CREATE_TOKEN_MANAGE_ADDRESS.bobaTestnet;
+      
     }
     if (!account) {
-      ErrorDlgShow(true, 'Wallet is unconnected');
+      ErrorDlgShow(true, 'Wallet is unconnected ..............');
     } else {
       getFee();
     }

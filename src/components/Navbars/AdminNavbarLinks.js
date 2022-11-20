@@ -55,7 +55,7 @@ import { useWeb3React } from '@web3-react/core';
 const useStyles = makeStyles(styles);
 
 const wallets = ['MetaMask', 'Wallet Connect'];
-const netlists = ['BobaMainnet', 'BobaTestnet'];
+const netlists = ['Filecoin — Wallaby testnet'];
 
 const usedlgStyles = makeStyles({
   avatar: {
@@ -168,20 +168,9 @@ function NetSelect(props) {
 
   const handleListItemClick = (value) => {
     console.log('---------------------value', value);
-    if (value === 'Ethereum') {
-      setNet(0);
-      console.log(value);
-    } else if (value === 'Bsc') {
-      setNet(1);
-      console.log(value);
-    } else if (value === 'BobaTestnet') {
-      setNet(3);
-      console.log(value);
-    } else if (value === 'BobaMainnet') {
+  
       setNet(2);
-      console.log(value);
-    }
-
+   
     if (wallet === 'MetaMask') loginMetamask();
     else if (wallet === 'BSCWallet') loginBSC();
     else if (wallet === 'Wallet Connect') loginWalletConnect();
@@ -201,7 +190,7 @@ function NetSelect(props) {
         {netlists.map((netitem) => (
           <ListItem button onClick={() => handleListItemClick(netitem)} key={netitem}>
             <ListItemAvatar>
-              <img src={netitem == 'BOBA' ? EthereumImg : imageGet(netitem)} alt="logo" style={{ width: '45px' }} />
+              <img src={netitem == 'Filecoin — Wallaby testnet' ? EthereumImg : imageGet(netitem)} alt="logo" style={{ width: '45px' }} />
             </ListItemAvatar>
             <ListItemText primary={netitem} />
           </ListItem>
